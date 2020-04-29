@@ -1,0 +1,18 @@
+@model Dish
+<a href="/">Home</a>
+<div class="jumbotron text-center">
+    <h1>@Model.Name</h1>
+    <p>@Model.Chef</p>
+    <hr>
+    <p>@Model.Description</p>
+    <p>@Model.Calories</p>
+    <p>@Model.Tastiness</p>
+    <div class="row">
+        <div class="col">
+            <a asp-action="Delete" asp-route-DId="@Model.UserID" class="btn btn-danger">Delete</a>
+        </div>
+        <div class="col">
+            <a asp-action="Edit" asp-route-DId="@Model.UserID" class="btn btn-warning">Edit</a>
+        </div>
+    </div>
+</div>
